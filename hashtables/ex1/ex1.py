@@ -43,4 +43,4 @@ def get_indices_of_item_weights(weights, length, limit):
 
 # Take a value(weight) and subtract it from the limit(weight limit)
 # if the result is equal to a stored number return the number.
-# If it does not find any matching number store it
+# If it does not find any matching number store the result.
