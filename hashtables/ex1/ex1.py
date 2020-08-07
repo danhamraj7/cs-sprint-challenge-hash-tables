@@ -25,3 +25,22 @@ def get_indices_of_item_weights(weights, length, limit):
     # when the sum of the num in the list
     # is not the limit, return none.
     return None
+
+
+# first thoughts
+
+# package :
+# weight limit = limit
+# weights  = item weight
+
+
+# fn suppose to find
+# 2 weights to equal the limit.
+# Eg  limit is  100
+# 75 +25 , 50 + 50,
+
+# take 2 values that will equal limit.
+
+# Take a value(weight) and subtract it from the limit(weight limit)
+# if the result is equal to a stored number return the number.
+# If it does not find any matching number store it
