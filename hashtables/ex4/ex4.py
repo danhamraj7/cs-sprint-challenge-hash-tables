@@ -5,34 +5,30 @@ def has_negatives(a):
 
     # iterate over each num in list
     for num in a:
-        # if the number is not in dict
-        if num not in nmbr_dict:
-            if num > 0:
+        # if the num is greater than 0
+        # if num in nmbr_dict
+        if num >= 0:
+            if num in nmbr_dict:
                 # add that number to the dict
-                nmbr_dict[num] = num
+                result.append(num)
                 # nmbr_dict = {1:1, 2:2, 3:3, 4:4}
 
-            elif num < 0:
+            else:
+                nmbr_dict[num] = 1
+
                 # add the negative numbers to dict
-                nmbr_dict[-num] = num
+        else:
+            negative = -num
+            if negative in nmbr_dict:
+                result.append(negative)
         # if the num has corresponding number in the dict
-        if num > 0:
-            # if number is greater than 0 and
             # if the negative number is in the dict
             # add to the result array
-            if -num in nmbr_dict:
-                result.append(num)
+            else:
+                nmbr_dict[negative] = 1
 
-        if num < 0:
-            # if the number is in the dict and the number is
-            # less than zero
-            # check for the positive number and cancel out
-            # the negative number
-            if -num in nmbr_dict:
-                result.append(-num)
-
-    # return result array
-    # print(nmbr_dict)
+     # return result array
+     # print(nmbr_dict)
     return result
 
 
